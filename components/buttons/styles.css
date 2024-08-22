@@ -1,0 +1,19 @@
+button {
+    padding: .5rem 1rem;
+    border: 2px solid black;
+    background: transparent;
+    box-shadow: 10px 10px 0px #000;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: tomato;
+    box-shadow: 10px 10px 0px tomato;
+}
+
+button:active {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+

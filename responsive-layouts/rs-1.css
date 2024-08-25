@@ -1,0 +1,66 @@
+/*  1.
+    ISSUE WITH fixed width only 
+    fixed width will create problem so we need to use max-width which will be responsive 
+*/
+/* .parent {
+    width: 700px;
+    max-width: 700px; 
+    margin-inline: auto;
+
+    padding: 32px;
+    background: black;
+}
+
+.child {
+    background: grey;
+} */
+
+/*  2.
+    ISSUE With fixed height only 
+    height will always create another problem
+    so to fix that always use min-height or do not use if you do not need
+*/
+
+/* 
+    ISSUE WITH "width: 100%" 
+    If you use width 100% in child elements, it will create an issue if you put padding or margin in the child elements which will then creates overflow issue
+    so to fix that, do not use width 100% on child elements or use only "auto"
+*/
+/* .parent {
+    margin-inline: auto;
+
+    padding: 32px;
+    background: black;
+}
+
+.child {
+    width: 100%;
+    padding: 2rem;
+    margin: 2rem;
+    background: grey;
+} */
+
+/* body {
+    width: 100vw;
+} */
+
+/* body {
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+header {
+    padding: 2rem;
+    background: pink;
+}
+
+main {
+    padding: 2rem;
+    background: lightblue;
+}
+
+footer {
+    padding: 2rem;
+} */

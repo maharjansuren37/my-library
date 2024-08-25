@@ -1,0 +1,46 @@
+.wrapper {
+    max-width: 700px;
+    margin-inline: auto;
+    padding-inline: 2rem;
+}
+
+/* USING FLEX  for children you can use flex: 1 or flex-basis: 100% or width: 100% to cover remaining space*/
+/* .columns {
+    display: flex;
+    gap: 1rem;
+}
+
+.columns > div {
+    flex: 1;
+    flex-basis: 100%;
+    width: 100%;
+
+    background: lightblue;
+    padding: 1rem;
+} */
+
+/* USING GRID */
+.columns {
+    display: grid;
+    gap: 1rem;
+}
+
+.columns > div {
+    background: lightpink;
+    padding: 1rem;
+}
+
+@media (min-width: 750px) {
+    .columns {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* .sidebar {
+    background: pink;
+}
+
+.main {
+    min-width: 600px;
+    background: lightblue;
+} */

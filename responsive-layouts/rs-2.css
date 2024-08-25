@@ -1,0 +1,73 @@
+/* Second responsive use case */
+
+.parent {
+    margin: 2rem;
+}
+
+.card {
+    display: grid;
+    gap: 1rem;
+
+    text-align: center;
+    justify-items: center;
+    grid-template-areas: "name" "image" "social" "role" "description";
+}
+
+.profile-img {
+    width: 75px;
+}
+
+.card > * {
+    margin: 0;
+}
+
+.card img {
+    grid-area: image;
+}
+
+.card ul {
+    grid-area: social;
+}
+
+.card h2 {
+    grid-area: name;
+}
+
+.card .position {
+    grid-area: position;
+}
+
+.card .profile-info {
+    grid-area: description;
+}
+
+.card {
+    background: hsl(0 0 50% / 0.2);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 1rem hsl(0 0 0 / 0.2);
+}
+
+.profile-img {
+    border-radius: 0.25rem;
+    box-shadow: 0 0.25rem 1rem hsl(0 0 0 /0.2);
+}
+
+.profile-position {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1;
+    font-size: 2rem;
+}
+
+.social-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+
+    & > * {
+        padding: 0;
+    }
+}

@@ -1,0 +1,65 @@
+/* got values from http://www.modularscale.com/ */
+
+:root {
+    /* colors */
+    --black: #000;
+    --white: #fff;
+
+    --current-color: var(--black);
+    --current-background: var(--white);
+
+    --primary-color: "";
+    --secondary-color: "";
+    --accent-color: "";
+    /* font sizes */
+    /* scale for 1.2 */
+    --fs-1: 1rem;
+    --fs-2: 1.2rem;
+    --fs-3: 1.44rem;
+    --fs-4: 1.72rem;
+    --fs-5: 2.074rem;
+    --fs-6: 2.488rem;
+
+    --transition-speed: 0.3s;
+}
+
+@media (min-width: 600px) {
+    :root {
+        /* scale for 1.33 */
+        --fs-1: 1rem;
+        --fs-2: 1.333rem;
+        --fs-3: 1.777rem;
+        --fs-4: 2.369rem;
+        --fs-5: 3.157rem;
+        --fs-6: 4.209rem;
+    }
+}
+
+body {
+    color: var(--current-color);
+    background-color: var(--current-background);
+}
+
+h1 {
+    font-size: var(--fs-6);
+}
+
+h2 {
+    font-size: var(--fs-5);
+}
+
+h3 {
+    font-size: var(--fs-4);
+}
+
+h4 {
+    font-size: var(--fs-3);
+}
+
+h5 {
+    font-size: var(--fs-2);
+}
+
+h6 {
+    font-size: var(--fs-1);
+}

@@ -21,6 +21,8 @@
     --fs-6: 2.488rem;
 
     --transition-speed: 0.3s;
+
+    --max-width: 900px;
 }
 
 @media (min-width: 600px) {
@@ -63,3 +65,5 @@ h5 {
 h6 {
     font-size: var(--fs-1);
 }
+
+

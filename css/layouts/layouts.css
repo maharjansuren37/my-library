@@ -1,0 +1,16 @@
+.cards {
+    display: grid;
+}
+
+.card {
+    background: lightblue;
+    padding: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+    .cards {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

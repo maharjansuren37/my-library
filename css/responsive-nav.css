@@ -1,0 +1,29 @@
+.header {
+    padding-block: 2rem;
+    background-color: lightblue;
+}
+
+nav {
+    display: none;
+    transform: translateY(-200%);
+}
+
+nav.active {
+    display: block;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger {
+    cursor: pointer;
+}
+
+.wrapper {
+    outline: 1px solid red;
+    max-width: 1100px;
+    margin-inline: auto;
+}

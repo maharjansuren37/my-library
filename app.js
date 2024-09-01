@@ -14,15 +14,3 @@
 
 // document.querySelector('#light').addEventListener('click', lightButtonCLick);
 // document.querySelector('#dark').addEventListener('click', darkButtonClick);
-
-const button = document.querySelector('button');
-
-function counter() {
-    let num = 0;
-
-    const count = document.getElementById('counter');
-
-    count.textContent = "number";
-}
-
-button.addEventListener('click', counter)

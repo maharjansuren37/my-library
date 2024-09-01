@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/cssResets/fullResets.css">
+    <link rel="stylesheet" href="../css/responsive-nav.css">
+    <script defer src="../app.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper flex">
+            <div><a href="">LOGO</a></div>
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>COntact</li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <img src="../assets/icons/icon-hamburger.svg" alt="">
+            </div>
+        </div>
+    </header>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        })
+    </script>
+</body>
+</html>

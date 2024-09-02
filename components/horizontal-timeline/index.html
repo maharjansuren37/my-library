@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="../../css/cssResets/generalResets.css"> -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section id="section-1">
+            <h1>lorem lipsum</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia excepturi tempora eum. Quod voluptates recusandae, similique libero, sunt totam minus est quam vitae, explicabo obcaecati nostrum dolorum ipsam corrupti facere.</p>
+        </section>
+        <section id="section-2">
+            <div class="img"><img src="../../assets/splash-img/adrien-olichon-OMfHdfegWb8-unsplash.jpg" alt=""></div>
+            <div class="img"><img src="../../assets/splash-img/samsung-memory-yDfEf2xrM7I-unsplash.jpg" alt=""></div>
+            <div class="img"><img src="../../assets/splash-img/the-prototype-8QSenw7z7yI-unsplash.jpg" alt=""></div>
+        </section>
+        <section id="section-3">
+            <div class="img"><img src="../../assets/splash-img/adrien-olichon-OMfHdfegWb8-unsplash.jpg" alt=""></div>
+            <div class="img"><img src="../../assets/splash-img/samsung-memory-yDfEf2xrM7I-unsplash.jpg" alt=""></div>
+            <div class="img"><img src="../../assets/splash-img/the-prototype-8QSenw7z7yI-unsplash.jpg" alt=""></div>
+        </section>
+        <section id="section-4">
+            <h1>lorem lipsum</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia excepturi tempora eum. Quod voluptates recusandae, similique libero, sunt totam minus est quam vitae, explicabo obcaecati nostrum dolorum ipsam corrupti facere.</p>
+
+        </section>
+        <section id="section-5">
+            <div class="img"><img src="../../assets/splash-img/adrien-olichon-OMfHdfegWb8-unsplash.jpg" alt=""></div>
+            <div class="img"><img src="../../assets/splash-img/samsung-memory-yDfEf2xrM7I-unsplash.jpg" alt=""></div>
+            <div class="img"><img src="../../assets/splash-img/the-prototype-8QSenw7z7yI-unsplash.jpg" alt=""></div>
+        </section>
+    </div>
+
+    <div class="timeline">
+        <div class="scroller"><p>[<span>Drag</span>]</p></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js" integrity="sha512-G7Wpe/pbg+zjyyM9HgQY6kacLAy+580lmA8DUXmZtioTI5FkaCRoLOaCLoeblrZABs7KZFD03cfSV9j7nmwxfw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        gsap.registerPlugin(Draggable);
+
+        window.onload = function() {
+            const timeline = document.querySelector('.timeline');
+            const scroller = document.querySelector('.scroller');
+            const container = document.querySelector('.container');
+            const timelineWidth = timeline.offsetWidth;
+            const scrollerWidth = scroller.offsetWidth;
+            const gap = parseInt(window.getComputedStyle(document.body).fontSize);
+
+            const maxDragX = timelineWidth - scrollerWidth - 2 * gap;
+
+            for (let i = 0; i < 100; i++) {
+                const marker = document.createElement('div');
+                marker.classList.add('marker');
+                timeline.appendChild(marker);
+            }
+
+            Draggable.create(scroller, {
+                type: "x",
+                bounds: {
+                    minX: gap,
+                    maxX: timelineWidth - scrollerWidth - gap,
+                },
+                onDrag: function() {
+                    let progress = (this.x - gap) / maxDragX;
+                    let containerX = -400 * (timelineWidth / 100) * progress;
+                    gsap.to(container, {
+                        x: containerX,
+                        duration: 1,
+                        ease: "power3.out"
+                    })
+                }
+            })
+        }
+    </script>
+</body>
+</html>

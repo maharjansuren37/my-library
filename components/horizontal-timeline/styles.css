@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+nav ul {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500vw;
+    height: 90vh;
+    display: flex;
+}
+
+.timeline {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 10vh;
+    padding: 1.5em 1em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.marker {
+    width: 1px;
+    height: 100%;
+    background-color: #fff;
+}
+
+.scroller {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+    background-color: #000;
+    cursor: pointer;
+    line-height: 120%;
+}
+
+span {
+    padding: 0 3em;
+}
+
+section {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    padding: 6em 2em 0 2em;
+    display: flex;
+    gap: 2em;
+    overflow: hidden;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    width: 50%;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+p {
+    width: 100%;
+}
+
+.section-1, .section-4 {
+    display: flex;
+    justify-content: space-between;
+}

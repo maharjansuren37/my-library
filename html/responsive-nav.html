@@ -17,11 +17,12 @@
                     <li>Home</li>
                     <li>About</li>
                     <li>Services</li>
-                    <li>COntact</li>
+                    <li>Contact</li>
                 </ul>
             </nav>
             <div class="hamburger">
-                <img src="../assets/icons/icon-hamburger.svg" alt="">
+                <img class="open" src="../assets/icons/icon-hamburger.svg" alt="">
+                <img class="close" src="../assets/icons/icon-close.svg" alt="">
             </div>
         </div>
     </header>
@@ -29,9 +30,13 @@
     <script>
         const hamburger = document.querySelector('.hamburger');
         const nav = document.querySelector('nav');
+        const open = document.querySelector('.open');
+        const close = document.querySelector('.close');
 
         hamburger.addEventListener('click', () => {
             nav.classList.toggle('active');
+            open.classList.toggle('d-none');
+            close.classList.toggle('d-block');
         })
     </script>
 </body>

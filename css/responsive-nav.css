@@ -5,10 +5,37 @@
 
 nav {
     display: none;
-    transform: translateY(-200%);
+    transform: translateX(-100%);
+    transition: all 0.3s ease-in-out;
 }
 
 nav.active {
+    display: block;
+    position: absolute;
+    z-index: 999;
+    background-color: blanchedalmond;
+    inset: 0;
+    min-height: 100vh;
+
+    transform: translateX(0%);
+}
+
+ul {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.close {
+    display: none;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
     display: block;
 }
 
@@ -20,10 +47,15 @@ nav.active {
 
 .hamburger {
     cursor: pointer;
+    position: absolute;
+    z-index: 1000;
+    right: 0;
 }
 
 .wrapper {
     outline: 1px solid red;
     max-width: 1100px;
     margin-inline: auto;
+
+    /* position: relative; */
 }

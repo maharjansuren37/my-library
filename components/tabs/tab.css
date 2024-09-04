@@ -1,0 +1,29 @@
+.container {
+    max-width: 1100px;
+    margin-inline: auto;
+}
+
+.tabs {
+    display: flex;
+    border: 1px solid black;
+}
+
+.tab {
+    border: none;
+    background-color: transparent;
+    padding: .5rem 1rem;
+}
+
+.tab:hover {
+    background-color: grey;
+}
+
+.tab.active {
+    background-color: green;
+}
+
+.tab-contents {
+    display: none;
+    border: 1px solid black;
+    border-top: none;
+}

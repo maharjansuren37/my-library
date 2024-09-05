@@ -1,0 +1,29 @@
+html, body {
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.wrapper {
+    /* max-width: 1100px; */
+    margin-inline: auto;
+    outline: 1px solid green;
+}
+
+.items {
+    display: flex;
+    user-select: none;
+    position: fixed;
+}
+
+.items.active {
+    transform: scale(1.02);
+}
+
+.item {
+    padding: 3rem;
+    cursor: grab;
+}
+
+.item:nth-child(odd) {
+    background: lightblue;
+}
